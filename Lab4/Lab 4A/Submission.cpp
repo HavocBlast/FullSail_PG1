@@ -134,7 +134,7 @@ public: // <----- Your enumerator must be below this line
 			result = number1 / number2;
 			break;
 		case 4:
-			number1 % number2;
+			result = number1 % number2;
 			break;
 		default: // catch incase user picks a number outside the valid selection
 			cout << "Please enter a valid operation." << endl;
