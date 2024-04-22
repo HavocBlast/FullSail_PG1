@@ -21,12 +21,21 @@ public:
     //
     // Example input:
     // - 14, 51, 6
-    //
+    // 
     // Expected output:
     // - 6
     static int Test1(int start, int end, int factor)
     {
-        return 0;
+        int multiple = 0;
+
+        for (int i = start; i <= end; i++)  // For loops that goes through all numbers from start to end
+        {
+            if (i % factor == 0)            // Checks to see if i is a equally divisable by the factor
+            {
+                multiple++;                 // If a multiple of the factor then add one to multiple total
+            }  
+        }
+        return multiple;
     }
 
     // Test 2 - Factorial
@@ -42,7 +51,13 @@ public:
     // - 720
 	static int Test2(int number)
 	{
-        return 0;
+        int factorial = 1;
+
+        for (int i = number; i > 0; i--) {  // loops through all numbers from number to 1
+            factorial *= i;                 // Multiplies i to the previous product and assigns the new product to factorial
+        }
+
+        return factorial;                   // Returns the factorial
 	}
 
     // Test 3 - Raise to a power
@@ -59,7 +74,12 @@ public:
     // - 25
     static int Test3(int root, int exponent)
     {
-        return 0;
+        int total = 1;
+
+        for (int i = exponent; i > 0; i--) {    // iterates through exponents from exponent to 1
+            total *= root;                      // multiplies root by the product of previous roots and assigns
+        }
+        return total;                           // returns the product of the roots for the given exponent
     }
 
     // Test 4 - Consumable
@@ -81,7 +101,15 @@ public:
     // - 6
     static int Test4(int onHand, int consume)
     {
-        return 0;
+        int cycles = 0;
+
+        while (onHand >= consume)   // Checks to make sure we have enough onHand to consume
+        {                           // Will continue to iterate till not enough left to fully consume
+            onHand -= consume;      // consumes a portion of onHand based on consume amount
+            cycles++;               // Adds an additional cycle once amount is consumed
+        }
+
+        return cycles;              // returns
     }
 
     // Test 5 - Prime number
@@ -99,7 +127,18 @@ public:
     // - true
     static bool Test5(int number)
     {
-        return false;
+        int factors = 0;
+        bool isPrime = false;
+
+        for (int i = number; i > 0; i--) {                              // Iterates through all the number between number and 1
+            if (number % i == 0) {                                      // checks to see if number is divisable by the index
+                factors++;                                              // If divisable than add one to factors
+            }
+        }
+
+        factors == 2 && number > 0 ? isPrime = true : isPrime = false;  // If factors for number equals 2 and it is a natual number then it is prime
+
+        return isPrime;
     }
 
     // Test 6 - Build a string
@@ -114,7 +153,24 @@ public:
     // - ABCDE
     static string Test6(char starter, int number)
     {
-        return "null";
+        string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+        string substring = "";
+        int initialIndex = 0;
+        int index = 0;
+
+        // iterate through alphabet to find the index of starter in the alphabet
+        while (alphabet[initialIndex] != starter) {
+            initialIndex++;    // Keeps moving to the next index of alphabet
+        }
+
+        index = initialIndex;   // sets index to the location of the starter
+
+        do {                                        // adds the starter char to the string
+            substring += alphabet[index];           // adds the next character to the string of previous characters
+            index++;
+        } while (index < initialIndex + number );   // makes sure that the loop stops when it gets to the index needed from the number
+
+        return substring;
     }
 
     // Test 7
@@ -142,7 +198,14 @@ public:
     // - "7 14 21 28 "
     static string Test7(int factor, int qty)
     {
-        return "null";
+        string output = "";
+        int index = 1;
+
+        while (index <= qty) {                          // Checks to make sure index doesn't exceed the qty of multiples
+            output += to_string(factor * index) + " ";  // outputs a string that created by the converted product of factor & index and adding trailing space
+            index++;                                    // increments index to continue to the next multiple
+        }
+        return output;
     }
 
     // Test 8 – Sum of values
@@ -157,6 +220,11 @@ public:
     // - 135
     static int Test8(int start, int end)
     {
-        return 0;
+        int total = 0;                          // Placeholder for total from range of values
+
+        for (int i = start; i <= end; i++) {    // illiterates through all the numbers between start and end inclusively
+            total += i;                         // add the number to the running total 
+        }
+        return total;                           // Returns the total
     }
 };
