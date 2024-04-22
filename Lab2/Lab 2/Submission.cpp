@@ -12,7 +12,15 @@ public:
 	 * to an integer. Return the integer.
 	*/
 	static int Test3(string input) {
-		return 0;
+
+		// placeholder for result
+		int result = 0;
+
+		// convert input from a string to an integer using the stoi() method and assign to result
+		result = stoi(input);
+
+		// return result
+		return result;
 	}
 
 	/* Test 4
@@ -21,7 +29,15 @@ public:
 	 * to a double. Return the double.
 	*/
 	static double Test4(string input) {
-		return 0;
+
+		// placeholder for result
+		double result = 0.0;
+
+		// convert input from a string to a double using stod() method and assign to result
+		result = stod(input);
+
+		// return result
+		return result;
 	}
 
 	/* Test 5
@@ -30,7 +46,15 @@ public:
 	 * to a float. Return the float.
 	*/
 	static float Test5(string input) {
-		return 0;
+
+		// placeholder for result
+		float result = 0.0f;
+
+		// convert input from a string to a float using the stof() method and assign to result
+		result = stof(input);
+
+		// return result
+		return result;
 	}
 
 	/* Test 6
@@ -39,7 +63,15 @@ public:
 	 * to an unsigned integer. Return the unsigned integer.
 	*/
 	static unsigned int Test6(string input) {
-		return 0;
+
+		// placeholder for result
+		unsigned int result = 0;
+
+		// convert input from a string to an unsigned int using the stoul() method and assign to result
+		result = stoul(input);
+
+		// return result
+		return result;
 	}
 
 	/* Test 7
@@ -48,7 +80,15 @@ public:
 	 * to an unsigned long. Return the unsigned long.
 	*/
 	static unsigned long Test7(string input) {
-		return 0;
+		
+		// placeholder for result
+		unsigned long result = 0;
+
+		// convert input from a string to an unsigned long using the stoull() method and assign to result
+		result = stoull(input);
+
+		// return result
+		return result;
 	}
 
 	/* Test 8
@@ -57,7 +97,15 @@ public:
 	 * to a float. Return the float.
 	*/
 	static float Test8(double input) {
-		return 0;
+		
+		// placeholder for result
+		float result = 0.0;
+
+		// convert input from a double to a float using a cast and assign to result
+		result = (float) input;
+
+		// return result
+		return result;
 	}
 
 	/* Test 9
@@ -66,7 +114,15 @@ public:
 	 * to an integer. Return the integer.
 	*/
 	static int Test9(float input) {
-		return 0;
+
+		// placeholder for result
+		int result = 0;
+
+		// convert input from a float to an integer using a cast and assign to result
+		result = (int) input;
+
+		// return result
+		return result;
 	}
 
 	/* Test 10
@@ -81,6 +137,14 @@ public:
 	 * - https://www.geeksforgeeks.org/stdto_string-in-cpp/
 	*/
 	static string Test10(int input) {
-		return "";
+
+		// placeholder for result
+		string result = "";
+
+		// convert input from an integer to a string using to_string() method and assign to result
+		result = to_string(input);
+
+		// return result
+		return result;
 	}
 };
