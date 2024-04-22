@@ -21,7 +21,7 @@ public:
 	*/
 	static int Test1(int numbers[], int index)
 	{
-		return 0;
+		return numbers[index];		// Returns the element of numbers based on the parameter index
 	}
 
 	/* TODO: Test 2
@@ -45,7 +45,7 @@ public:
 	*/
 	static void Test2(int numbers[5], int index)
 	{
-
+		numbers[index] = 0;		//selects the element needed and assigns 0 to that location
 	}
 
 	/* TODO: Test 3
@@ -61,7 +61,17 @@ public:
 	* - true
 	*/
 	static bool Test3(vector<string> names) {
-		return false;
+
+		bool hasDup = false;
+
+		for (int i = 0; i < names.size(); i++) {		// illiterates through each element
+			for (int j = 0; j < names.size(); j++) {	// nested loop to illiterate through all names so we can compare
+				if (names[i] == names[j] && i != j) {	// checks to see if there is a dup but checks to make sure i is not the same a j causing a false pos
+					hasDup = true;						// there will always be one "dup" but this is  
+				}
+			}
+		}
+		return hasDup;
 	}
 
 
@@ -80,7 +90,8 @@ public:
 	*/
 	static int Test4(vector<int> numbers, int index)
 	{
-		return 0;
+
+		return numbers[index];		// Returns the element of numbers with the index from the parameter
 	}
 
 	/* TODO: Test 5
@@ -101,7 +112,15 @@ public:
 	*/
 	static vector<int> Test5(int number1, int number2, int number3, int number4, int number5)
 	{
-		return {};
+		vector<int> output;			// Declare vector of int type
+
+		output.push_back(number1);	// add a new element in output based on the order
+		output.push_back(number2);
+		output.push_back(number3);
+		output.push_back(number4);
+		output.push_back(number5);
+
+		return output;
 	}
 
 	/* TODO: Test 6
@@ -121,7 +140,14 @@ public:
 	*/
 	static vector<string> Test6(string word2, string word4, string word1, string word3)
 	{
-		return {};
+		vector<string> output;
+
+		output.emplace(output.begin(), word4); // places word4 at the beginning of the vector
+		output.emplace(output.begin(), word3);
+		output.emplace(output.begin(), word2);
+		output.emplace(output.begin(), word1);
+
+		return output;
 	}
 
 	/* TODO: Test 7
@@ -141,7 +167,14 @@ public:
 	*/
 	static vector<int> Test7(char letters[])
 	{
-		return {};
+		vector<int> output;
+
+		for(int i = 0; i < 5; i++)					// illiterates through all the chars in the array
+		{
+			output.push_back((int)letters[i]);		// adds the indexed char from the array to the vector
+		}
+
+		return output;
 	}
 	
 	/* TODO: Test 8
@@ -171,7 +204,11 @@ public:
 	*/
 	static void Test8(char letters[])
 	{
-
+		for (int i = 0; i < 5; i++) {					// Illerates through the 0 through 4 to get a int for the index
+			if (i % 2 != 0) {							// checks to see if the index is even since there is an 0-based index
+				letters[i] = tolower(letters[i]);		// If the index is even then that char is set to lowercase
+			}
+		}
 	}
 
 	/* TODO: Test 9
@@ -192,7 +229,18 @@ public:
 	*/
 	static vector<vector<int>> Test9(vector<int> mins, vector<int> maxes, vector<int> seeds)
 	{
-		return {};
+		vector<vector<int>> numbers = {mins, maxes, seeds};						// initializes a 2D vector with the three sets that are passed to the function
+		vector<vector<int>> output(5, vector<int>(3, 1));						// initializes a 2D vector with placeholder data that can be changed later
+
+		for (int row = 0; row < numbers.size(); row++) {						//interates through the outer vector
+			vector<int> interiorRow = numbers.at(row);							//assigns the interior set to a variable 
+			for (int column = 0; column < interiorRow.size(); column++) {		//interates through the inner vector
+				int item = interiorRow.at(column);								// assigns interior data to item
+				output[column][row] = item;										// assigns item to the approaprate location in output 
+			}
+		}
+			
+		return output;
 	}
 
 	/* TODO: Test 10
@@ -211,6 +259,16 @@ public:
 	*/
 	static vector<vector<int>> Test10(vector<vector<int>> numbers)
 	{
-		return {};
+		vector<vector<int>> output(3, vector<int>(2,1));					// initializes 2D vector to hold placeholder int of 1 so we can change the values later
+
+		for (int row = 0; row < numbers.size(); row++) {					// interates through the outer vector
+			vector<int> interiorRow = numbers.at(row);						// assigns the interior set to a variable that we can use later
+			for (int column = 0; column < interiorRow.size(); column++) {	// interates through interior vector
+				int item = interiorRow.at(column);							// assigns the item in interior
+				output[column][row] = item;									// uses item to assign to output vector swapping row and column to transpose data 90 degrees
+			}
+		}
+
+		return output;
 	}
 };
