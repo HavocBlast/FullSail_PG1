@@ -1,10 +1,10 @@
 #include <math.h>
 #include <string>
-// #define TEST6
-// #define TEST7
-// #define TEST8
-// #define TEST9
-// #define TEST10
+#define TEST6
+#define TEST7
+#define TEST8
+#define TEST9
+#define TEST10
 
 
 /*  Instructions
@@ -43,7 +43,14 @@ public:
 */
     static int Test1(int years)
     {
-        return 0;
+        // placeholder for days
+        int days = 0;
+
+        // takes input of years and multiplies by number of days in a year (365) and assigns to days
+        days = years * 365;
+
+        // returns days
+        return days;
     }
 
     /* Test 2
@@ -59,8 +66,15 @@ public:
     * - 2.50
     */
     static double Test2(double number1, double number2)
-    {
-        return 0;
+    { 
+        // placeholder for result
+        double result = 0.0;
+
+        // divides number1 by number2 and assigns to result
+        result = number1 / number2 ;
+
+        // returns result
+        return result;
     }
 
     /* Test 3
@@ -78,7 +92,14 @@ public:
     */
     static int Test3(int number1, int number2)
     {
-        return 0;
+        // placeholder for result
+        int result = 0;
+        
+        // finds the remainder of dividing number1 by number2 by using the modulus operator and assigning to result
+        result = number1 % number2;
+
+        // returns result
+        return result;
     }
 
     /* Test 4
@@ -100,7 +121,14 @@ public:
     */
     static float Test4(double input)
     {
-        return 0;
+        // placeholders for result & converted
+        double result = 0.0;
+
+        // finds the square root of the input using the sqrt() method and casts to a float
+        result = (float) sqrt(input);
+
+        // returns converted
+        return result;
     }
 
     /* Test 5
@@ -122,7 +150,14 @@ public:
     */
     static double Test5(int number, int power)
     {
-        return 0;
+        // placeholder for result
+        double result = 0.0;
+
+        // calculates number raised to the power of power and assigns to result
+        result = pow(number, power);
+
+        // returns result
+        return result;
     }
 
     /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!   IMPORTANT   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -163,6 +198,17 @@ public:
     * - "Hey, what's up man?"
     */
 
+    static std::string Test6(std::string input1, std::string input2, std::string input3)
+    {
+        // placeholder for message
+        std::string message = "";
+
+        // create message using conatenation to combine three string and turn into a question
+        message = input1 + " " + input2 + " " + input3 +"?";
+
+        return message;
+    }
+
     /* Test 7
     * ==================
     * Create a method named "Test7" that accepts one double parameter.
@@ -179,6 +225,18 @@ public:
     * - 5.25f
     */
 
+    static float Test7(double number)
+    {
+        // placeholder for result
+        float result = 0.0;
+
+        // converts input from a double to a float by casting and assigning to result
+        result = (float) number;
+
+        // returns result
+        return result;
+    }
+
     /* Test 8
     * ==================
     * Create a method named "Test8" that accepts three double parameters.
@@ -192,6 +250,18 @@ public:
     * Expected output:
     * - 45.0
     */
+
+    static double Test8(double number1, double number2, double number3)
+    {
+        // placeholder for average
+        double average = 0;
+
+        // calculates the average of three input numbers
+        average = (number1 + number2 + number3) / 3;
+
+        // returns average
+        return average;
+    }
 
     /* Test 9
     * ==================
@@ -212,6 +282,18 @@ public:
     * Expected output:
     * - 35
     */
+
+    static double Test9(double triBase, double triHeight)
+    {
+        // placeholder for area
+        double area = 0;
+
+        // finds the area of a triangle using the params triBase and triHeight
+        area = 0.5 * triBase * triHeight;
+
+        // returns area
+        return area;
+    }
 
     /* Test 10
     * ==================
@@ -235,4 +317,16 @@ public:
     * Expected output:
     * - 4.167
     */
+
+    static double Test2(double number1, double number2, double number3)
+    {
+        // placeholder for result
+        double result = 0.0;
+
+        // divides number1 by number 2 and then divides by number3 and assigns the value to result
+        result = number1 / number2 / number3;
+
+        // returns result
+        return result;
+    }
 };
