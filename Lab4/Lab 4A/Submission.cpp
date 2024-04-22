@@ -1,7 +1,8 @@
 #include <string>
+#include <iostream>
 
 // TODO: Uncomment this line after you create your MathOperator enum
-// #define MATH_OPERATOR
+#define MATH_OPERATOR
 
 using namespace std;
 
@@ -36,11 +37,16 @@ using namespace std;
 class Submission
 {
 
-
-
 public: // <----- Your enumerator must be below this line
 
 	// TODO: CREATE YOUR ENUMERATOR HERE
+	enum MathOperator {
+		Add = 0,
+		Subtract = 1,
+		Multiply = 2,
+		Divide = 3,
+		Modulo = 4,
+	};
 
 #ifdef MATH_OPERATOR
 	/* TODO: Test 1 - Create an enum
@@ -65,7 +71,30 @@ public: // <----- Your enumerator must be below this line
 
 	static MathOperator Test1(int input)
     {
-        return MathOperator::Modulo;
+		MathOperator operation;
+
+		switch (input)
+		{
+		case 0:
+			operation = MathOperator::Add;
+			break;
+		case 1:
+			operation = MathOperator::Subtract;
+			break;
+		case 2:
+			operation = MathOperator::Multiply;
+			break;
+		case 3:
+			operation = MathOperator::Divide;
+			break;
+		case 4:
+			operation = MathOperator::Modulo;
+			break;
+		default:
+			break;
+		}
+		
+        return operation;
     }
 
     /* TODO: Test 2
@@ -84,7 +113,34 @@ public: // <----- Your enumerator must be below this line
 	*/
     static int Test2(int number1, int number2, MathOperator operation)
     {
-        return 0;
+		// Declares int variable for the result of the below operation
+		int result;
+
+		// Switch statement will take the operation param and select the case that is true 
+		// The corresponding operation will be executed and the result will be returned.
+		// If no valid operation
+		switch (operation)
+		{
+		case 0:
+			result = number1 + number2;
+			break;
+		case 1:
+			result = number1 - number2;
+			break;
+		case 2:
+			result = number1 * number2;
+			break;
+		case 3:
+			result = number1 / number2;
+			break;
+		case 4:
+			number1 % number2;
+			break;
+		default: // catch incase user picks a number outside the valid selection
+			cout << "Please enter a valid operation." << endl;
+			break;
+		}
+        return result;
     }
 #endif
 
@@ -107,7 +163,17 @@ public: // <----- Your enumerator must be below this line
 
     static string Test3(bool input)
     {
-        return "";
+		// Placeholder for result of the if statement to be used to returned
+		std::string result;
+
+		if ( input == true){ // Sets result as "Proven" if input = true
+			result = "Proven";
+		}
+		else { // Sets result as "Denied" if the input is anything but true
+			result = "Denied";
+		}
+
+        return result;
     }
 
     /* TODO: Test 4
@@ -130,7 +196,21 @@ public: // <----- Your enumerator must be below this line
     */
     static double Test4(double input, bool kiloToLb)
     {
-        return 0;
+		// Initializes variable to be returned after the operation is completed
+		double result;
+
+		switch (kiloToLb) { // switch statement completes the operation that user chooses based on the args
+			case true:
+				result = input * 2.2; // conversion for kgs to lbs
+				break;
+			case false:
+				result = input * 0.45; // conversion for lbs to kgs
+				break;
+			default:
+				cout << "Please select either \"true\" or \"false\"" << endl;
+		}
+
+        return result;
     }
 
     /* TODO: Test 5
@@ -157,7 +237,26 @@ public: // <----- Your enumerator must be below this line
 
     static string Test5(int input)
     {
-        return "";
+		std::string requiredAction;
+
+		switch (input) { // Switch used to set requireAction variable based on the arguement from Test5 function
+			case 1:
+				requiredAction = "Verbal Reprimand";
+				break;
+			case 2:
+				requiredAction = "Formal Reprimand";
+				break;
+			case 3:
+				requiredAction = "Suspension";
+				break;
+			case 4:
+				requiredAction = "Termination";
+				break;
+			default:
+				std::cout << "Please select a vaild Infraction Severity" << std::endl;
+		}
+		//returns the string associated with the correct case from the switch statement
+        return requiredAction;
     }
 
     /* TODO: Test 6
@@ -178,7 +277,22 @@ public: // <----- Your enumerator must be below this line
 
     static bool Test6(int year)
     {
-        return false;
+		// Initialize variable so it can be returned 
+		bool isLeapYear;
+
+		if (year % 4 != 0) { // checks to see if the modulo is not 0 to show that the year is not divisible bt 4
+			if (year % 400 == 0) {
+				isLeapYear = true;
+			}
+			else {
+				isLeapYear = false;
+			}
+		}
+		else if (year % 4 == 0 && year % 100 != 0) { // checks to see if the year is divisable by 4 but not by 100 using the modulo
+			isLeapYear = true;
+		}
+		
+        return isLeapYear;
     }
 
 	/* TODO: Test 7
@@ -191,7 +305,12 @@ public: // <----- Your enumerator must be below this line
     */
     static bool Test7(int a, int b, int c)
     {
-        return false;
+		bool isRightTriangle;
+
+		// used a Ternary Operator since the conditional is simply checking if the sume of a & b = c
+		a + b == c ? isRightTriangle = true : isRightTriangle = false;
+
+        return isRightTriangle;
     }
 
     /* TODO: Test 8
@@ -221,6 +340,32 @@ public: // <----- Your enumerator must be below this line
     */
     static char Test8(double grade)
     {
-        return '~';
+		char letterGrade;
+
+		if (grade >= 90 && grade <= 100) {
+			letterGrade = 'A';
+		}
+		else if (grade >= 80 && grade < 90)
+		{
+			letterGrade = 'B';
+		}
+		else if (grade >= 73 && grade < 80)
+		{
+			letterGrade = 'C';
+		}
+		else if (grade >= 70 && grade < 73)
+		{
+			letterGrade = 'D';
+		}
+		else if (grade >= 0 && grade < 70)
+		{
+			letterGrade = 'F';
+		}
+		else if (grade < 0 || grade > 100)
+		{
+			letterGrade = '?';
+		}
+
+        return letterGrade;
     }
 };
