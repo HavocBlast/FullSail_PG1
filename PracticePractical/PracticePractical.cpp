@@ -4,6 +4,9 @@
 #include <math.h>
 #include <string>
 #include "Utility.cpp"
+#include <vector>
+
+using namespace std;
 
 /* TODO: BEFORE YOU WRITE ANY CODE:
  * ====================================
@@ -21,7 +24,16 @@
     // TODO: In the FindAverage method compute the average (the sum of all values divided by the number of values)
 	//       of the values in the array parameter and return it.
 
+double FindAverage(std::vector<double> numbers) {
 
+    double total = 0.0;
+
+    for (double num : numbers) {
+        total += num;
+    }
+    
+    return total / numbers.size();
+}
 
 int main()
 {
@@ -39,7 +51,7 @@ int main()
      * For example:
      * - Utility::RandomInt(6,10);    will return a number between, and including, 6 and 10
      */
-
+    cout << greetings[Utility::RandomInt(0, 4)];            // picks a number between 0 and 4 inclusively and returns that index of greetings
 
     std::cin.get();
     std::cout << "\x1B[2J\x1B[H"; //Special string that clears the screen and moves the cursor to the top-left
@@ -56,6 +68,22 @@ int main()
      * - https://www.geeksforgeeks.org/type-conversion-in-c/
 	 */
 
+
+    string input;
+    int inputNum = 0;
+    double digits = 0.0;
+
+    while (inputNum < 1) {
+        input = "";                                                         // clears previous input
+        cout << "Please enter a positive number: ";
+        cin >> input;                                                    // assigns the input to a variable
+        inputNum = stoi(input);                                   // converts input to an int and assigns to variable
+    }
+
+    digits = stod(input);                                             // converts string input to a double
+    cout << sqrt(digits) << endl;                                // finds the square root of digits
+
+    cin.ignore();                                                         // clears buffer IO buffer
     std::cin.get();
     std::cout << "\x1B[2J\x1B[H"; //Special string that clears the screen and moves the cursor to the top-left
 
@@ -65,6 +93,17 @@ int main()
       * it in the vector. The input does not have to be error checked.
       */
 
+    vector<double> number (Utility::RandomInt(3, 6));       // Declares and initialize a number vector with a length based on a random into between 3 and 6 inclusively
+
+    // Loops through the number vector and asks for a value from user for each element
+    for (int index = 0; index < number.size(); index++) {        // Loops through the number vector 
+        double input;                                                                // Declares double type value
+        cout << "Enter a value: ";
+        cin >> input;                                                                 // Assigns the user's input string to a double variable
+        number.at(index) = input;                                            // Assigns the current element to the current user input
+    }
 
     // TODO: Call the FindAverage method (See above) passing in the vector of doubles and display the return value to the screen.
+
+    cout << FindAverage(number) << endl;
 }
