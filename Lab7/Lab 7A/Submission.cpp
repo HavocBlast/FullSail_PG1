@@ -1,14 +1,8 @@
 #include <string>
 #include <vector>
-
-// TODO: Uncomment once you have created the required Shape type class
-// #include "Shape.cpp"
-
-// TODO: Uncomment once you have created the required TextCodec class
-//#include "TextCodec.cpp"
-
-// TODO: Uncomment once you have created the required Book class
-// #include "Book.cpp"
+#include "Shape.cpp"
+#include "TextCodec.cpp"
+#include "Book.cpp"
 
 using namespace std;
 
@@ -37,8 +31,8 @@ public:
 	 *   accessible within the Submission.cpp file until you uncomment
 	 *	 the corresponding lines above.
 	 */
-	static Circle Test1(int x, int y, int radius) {
-		return {};
+	static Circle Test1(int x, int y, int radius) {		
+		return Circle(x, y, radius);							// returns Circle object based on args
 	}
 
 	/* TODO: Test 2 - Create the GetArea() member method
@@ -65,7 +59,7 @@ public:
 	 *
 	 */
 	static Circle Test2(int x, int y, int radius) {
-		return {};
+		return Circle(x, y, radius);						// returns Circle object based on args
 	}
 
 	/* TODO: Test 3 - Create the GetCircumference() member method
@@ -92,7 +86,7 @@ public:
 	 *
 	 */
 	static Circle Test3(int x, int y, int radius) {
-		return {};
+		return Circle(x, y, radius);						// returns Circle object based on args
 	}
 
 	/* TODO: Test 4 - Create the GetDiameter() member method
@@ -117,7 +111,7 @@ public:
 	 */
 
 	static Circle Test4(int x, int y, int radius) {
-		return {};
+		return Circle(x, y, radius);							// returns Circle object based on args
 	}
 
 #endif
@@ -151,7 +145,8 @@ public:
 	 */
 
 	static string Test5(short int offset, string message) {
-		return {};
+		TextCodec codec(offset);											// Instantiates new object called codec
+		return codec.Encode(message);								// returns the encoded message 	
 	}
 
 	/* TODO: Test 6 - Create the Decode member method
@@ -175,7 +170,8 @@ public:
 	 *   is fully completed.
 	 */
 	static string Test6(short int offset, string message) {
-		return {};
+		TextCodec codec(offset);											// Instantiates new object called codec
+		return codec.Decode(message);								// Returns the decoded message
 	}
 
 #endif
@@ -202,7 +198,8 @@ public:
 	 */
 
 	static Book Test7() {
-		return {};
+		Book book1;					// Instantiates a book object
+		return book1;					// Returns the default book1 values of Book
 	}
 
 	/* TODO: Test 8 - Create an overloaded constructor
@@ -221,7 +218,8 @@ public:
 	 */
 
 	static Book Test8(string title, string author) {
-		return {};
+		Book book2(title, author);							// Instantiates a book object
+		return book2;												// returns the book2 object with the fields based on the args
 	}
 #endif
 };
