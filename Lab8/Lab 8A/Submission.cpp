@@ -46,7 +46,7 @@ public:
      */
     static Student Test1(string last, string first, int idNo)
     {
-        return Student(last, first, idNo);
+        return Student(last, first, idNo);		// Instantiates object using constructor with params
     }
 
     /* TODO: Test 2 - Getters and Setters
@@ -73,7 +73,7 @@ public:
 	 */
     static Student Test2()
     {
-		Student student1;		// Instantiates Student object
+		Student student1;		// Instantiates Student object with default constructor
         return student1;
     }
 
@@ -127,18 +127,18 @@ public:
 	static bool Test4(int idNumber, vector<Student> students)
     {
 		bool studentFound = false;
-		Student defaultStudent;
-		for (int i = 0; i < students.size(); i++) {
-			if (students[i].GetIDNumber() == idNumber) {
-				students[i] = defaultStudent;
-				studentFound = true;
-				break;
+		Student defaultStudent;												// Instantiates object with default constructor
+		for (int i = 0; i < students.size(); i++) {							// Loops through all the students in vector
+			if (students[i].GetIDNumber() == idNumber) {			// checks to see if the current student has the same id as in method arguments
+				students[i] = defaultStudent;								// if the same then assigns the default student to location
+				studentFound = true;											// sets student found to true
+				break;																	// breaks to make sure this stops after finding the first student that matches
 			}
 			else {
-				studentFound = false;
+				studentFound = false;											// If no student found with that id then sets to false
 			}
 		}
-		return studentFound;
+		return studentFound;													// returns if student with matching id is found
     }
 
 	/* TODO: Test 5 - Retrieve from collection
@@ -157,13 +157,13 @@ public:
 	 */
     static Student Test5(int idNumber, vector<Student> students)
     {
-		Student currentStudent;
-		for (Student student : students) {
-			if (student.GetIDNumber() == idNumber) {
-				currentStudent = student;
-				break;
+		Student currentStudent;																	// Instantiates student object with default constructor
+		for (Student student : students) {														// Loops through all the students in vector
+			if (student.GetIDNumber() == idNumber) {									// checks to see if the student in current location matches given id
+				currentStudent = student;														// If match found then sets currentStudent to the student found at location in vector
+				break;																						// Breaks to stop after finding first match
 			}
 		}
-        return currentStudent;
+        return currentStudent;																		// returns either default student or the student with matched id
     }
 };
