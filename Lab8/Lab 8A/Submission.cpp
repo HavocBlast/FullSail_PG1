@@ -46,7 +46,7 @@ public:
      */
     static Student Test1(string last, string first, int idNo)
     {
-        return {};
+        return Student(last, first, idNo);
     }
 
     /* TODO: Test 2 - Getters and Setters
@@ -73,7 +73,8 @@ public:
 	 */
     static Student Test2()
     {
-        return {};
+		Student student1;		// Instantiates Student object
+        return student1;
     }
 
 	/* TODO: Test 3 - Insert into collection
@@ -93,7 +94,21 @@ public:
 	 */
     static bool Test3(vector<Student> students, Student enrolled)
     {
-		return false;
+		bool emptyFound = false;
+		for (Student student : students) {													
+			if (student.GetIDNumber() == 1000000) {			// Checks for empty slots by finding the first default id
+				// student.SetFirstName(enrolled.GetFirstName());
+				// student.SetLastName(enrolled.GetLastName());			// Could do it this way
+				// student.SetIDNumber(enrolled.GetIDNumber());
+				student = enrolled;				// But this is simple and would work even when we add fields later
+				emptyFound = true;				//	Shows we found an empty slot 
+				break;									// Allows us to leave the loop once we find the first empty slot
+			}
+			else {
+				emptyFound = false;										// Shows that all slots are filled
+			}
+		}
+		return emptyFound;
     }
 
 	/* TODO: Test 4 - Remove from collection
@@ -111,7 +126,19 @@ public:
 	 */
 	static bool Test4(int idNumber, vector<Student> students)
     {
-		return false;
+		bool studentFound = false;
+		Student defaultStudent;
+		for (int i = 0; i < students.size(); i++) {
+			if (students[i].GetIDNumber() == idNumber) {
+				students[i] = defaultStudent;
+				studentFound = true;
+				break;
+			}
+			else {
+				studentFound = false;
+			}
+		}
+		return studentFound;
     }
 
 	/* TODO: Test 5 - Retrieve from collection
@@ -130,6 +157,13 @@ public:
 	 */
     static Student Test5(int idNumber, vector<Student> students)
     {
-        return {};
+		Student currentStudent;
+		for (Student student : students) {
+			if (student.GetIDNumber() == idNumber) {
+				currentStudent = student;
+				break;
+			}
+		}
+        return currentStudent;
     }
 };

@@ -4,7 +4,48 @@ using namespace std;
 
 class Student
 {
+    std::string lastName;
+    std::string firstName;  
+    int id;
 
+public:
+    Student() {
+        lastName = "";
+        firstName = "";
+        id = 1000000;
+    }
+
+    Student(std::string lastName, std::string firstName, int id) {
+        this->lastName = lastName;
+        this->firstName = firstName;       
+        this->id = id;
+    }
+
+    // Getters
+    std::string GetFirstName() {
+        return firstName;
+    }
+
+    std::string GetLastName() {
+        return lastName;
+    }
+
+    int GetIDNumber() {
+        return id;
+    }
+
+    // Setters
+    void SetFirstName(std::string firstName) {
+        this->firstName = firstName;
+    }
+
+    void SetLastName(std::string lastName) {
+        this->lastName = lastName;
+    }
+
+    void SetIDNumber(int id) {
+        this->id = id;
+    }
 
     // NOTE: The student class continues beneath this line. DO NOT close the Student
     //       class code block prematurely by adding an extra closing curly bracket.
