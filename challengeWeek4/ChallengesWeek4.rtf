@@ -1,0 +1,200 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Bold;\f1\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Practice 1\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Print out a table of the system-provided integral variable types (signed and unsigned), including how many bytes each variable type consumes in memory, the equivalent number of bits, how many combinations that can hold total, and the range of numbers (min and max value) each type can store.\
+To help you get the values for your table (instead of just copying them from a book or the Internet), here are some suggestions:\
+\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls1\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \'95 sizeof(byte) \'96 gives you the number of bytes of memory a byte consumes\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \'95 sizeof(int) \'96 gives you the number of bytes of memory an int consumes\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \'95 etc.\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \'95 Byte.MaxValue \'96 gives you the maximum value a byte can hold\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \'95 Int16.MinValue \'96 gives you the minimum value a short integer (16-bit) can hold\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \'95 Int32.MinValue \'96 gives you the minimum value an integer (32-bit) can hold\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \'95 Int64.MaxValue \'96 gives you the maximum value a long integer (64 bit) can hold\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \'95 etc.\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \
+The point of this program is to prove to you that different variable types consume different amounts of memory. And depending on how much memory is consumed, and how it is used, a different range of values is allowed per variable type.\
+How about the number of combinations a long or ulong can hold? Were you able to display this in the table as an integer? If so, how? If not, why?\
+\uc0\u8232 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Practice 2\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Allocate 3 variables, but allocate each in a separate pool of memory. Note that by allocating an object for any reference type variable, such as a string or array or class instance, you are actually allocating two objects at once, in two different pools. For example, the following code allocates a reference variable on the stack called name and an object on the heap, which stores the actual characters. The variable name, being a reference type variable, simply holds a reference to the object on the heap.\
+string name = \'93John von Neumann\'94;\
+\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Practice 3\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Make a class called Client, which holds only one member variable, a string called mName. Do not initialize this member variable at all. Now make a default constructor (no overloaded constructor), which does nothing at all. Now make an accessor for the member variable mName, but no mutator.\
+Now that you have your class with the above definition, make an instance of Client, get the client\'92s name using its accessor method, and then print it out. Your Program code should look something like this:\
+Client c = new Client();\
+string n = c.GetName();\
+Console.WriteLine(n.ToLower());\
+Answer the following questions:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls2\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 What happens when you try to print out the client\'92s name?\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 What is the value of n?\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 What does that mean?\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Practice 4\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 The following picture shows a small chunk of disassembly for some program. You can view the disassembly of any program while debugging it simply by setting a breakpoint, and when that breakpoint is reached, and the program is paused, bring up the window from Debug -> Windows -> Disassembly.\
+Is this particular snapshot below there are two assembly instructions that make calls to functions in memory. They are the lines that start with the instruction call. Note that the memory addresses of the two functions in memory are displayed in hexadecimal.\
+How far apart in memory are the two memory addresses of the two functions? Write your answer in bytes and estimate to the nearest collection of bytes (for example: 2.8GB, or 385MB, or 896KB, etc.).\
+\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Practice 5\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Write a program that converts decimal integers to binary strings. For example the user enters a non-negative integer value and the program prints out the same number as the correct string of 1s and 0s. Do not use any .NET functions that do this automatically for you with a simple function call. Think about the decimal to binary base conversion algorithms and code an equivalent program.\
+Example Output\
+Enter non-negative integer: 0\
+In binary: 0\
+Enter non-negative integer: 255\
+In binary: 11111111\
+Enter non-negative integer: 4\
+In binary: 100\
+Enter non-negative integer: 10\
+In binary: 1010\
+Enter non-negative integer: 7\
+In binary: 111\
+Enter non-negative integer: 33\
+In binary: 100001\
+\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Practice 6\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Use the System.DateTime struct to print out what the current time is.\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b \cf0 Example Output
+\f1\b0 \
+Now: 10/13/2015 5:44:09 PM\
+\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Practice 7\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Make a star field! Declare a struct called Point with the following member variables:\
+public int x;\
+public int y;\
+Then make an array of Point variables, assigning each of them random screen coordinates. Iterate through the array, printing a \'91.\'92 character to the screen for each Point\'92s corresponding coordinate. Remember, the screen bounds are Console.WindowWidth and Console.WindowHeight.\
+\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Practice 8\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Make a moving star field! Accomplish this however you wish . Here are some suggestions:\
+\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls3\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Perhaps make an infinite loop incrementing each Point by 1 in the x. If a Point\'92s x becomes greater than or equal to the Console.WindowWidth, then set it to 0 (as if it wrapped around the screen). You can use Thread.Sleep() to slow the loop down.\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Perhaps wait for user input, and each time the user presses a key, add 1 or -1 to each Point either on the x-axis or y-axis depending on the key the user pressed. Like mentioned above, wrap the Points if they go off the screen.\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Perhaps give each of your Points a z member variable, representing the \'93distance\'94 from the user. When you move the Points along the x or y, move them by an amount multiplied by the z variable, so that \'93farther\'94 Points move slower than \'93closer\'94 points. This will create a sort of parallax effect.\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Practice 9\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Create a class called Rectangle. It should have 4 integer member variables: x position, y position, width, and height. Now write a IsColliding() method, which returns a bool and takes as input another Rectangle, and detects if they are colliding (overlapping) or not. Try to come up with an algorithm on your own first before looking one up on Google.\
+To test your program visually, you could make another method called Draw() to draw the Rectangle screen. Then you could define 2 Rectangle instances, Draw() them each to the screen, called the IsColliding() method of one of them, passing the other as input, and print out whether they are colliding or not.\
+\uc0\u8232 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Practice 10\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Create a class called Vehicle, which has only one member variable, a float indicating the max MPH of the vehicle. Give the class two constructors, a default and an overloaded constructor. The default constructor will simply set the max MPH field to 0. The overloaded constructor takes the max MPH passed in. Give the class a method called Display, which displays the max MPG to two decimal places (research how to do this in C#). Finally, give the class a static method called SortVehicles, which takes an array Vehicle objects and sorts them. You can use any sorting algorithm you want to do this.\
+Write a program that creates an array of Vehicles with either specific or random max MPH values. Iterate through the array and Display each Vehicle object. Then call the static SortVehicles method, passing your array of Vehicles. Then iterate again through the array and Display each Vehicle object.\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b \cf0 Example Output
+\f1\b0 \
+Vehicles (MaxMPH):\
+460.77\
+285.20\
+420.27\
+434.77\
+487.80\
+Vehicles (MaxMPH):\
+285.20\
+420.27\
+434.77\
+460.77\
+487.80\
+\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Practice 11\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Write the game, "Rock, Paper, Scissors.\'94 Support input validation using exception handling.\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b \cf0 Example Output
+\f1\b0 \
+Please choose:\
+1) Rock\
+2) Paper\
+3) Scissors\
+4) Quit\
+> 1\
+You chose Rock. Computer chose Rock. Tie game!\
+Please choose:\
+1) Rock\
+2) Paper\
+3) Scissors\
+4) Quit\
+> 1\
+You chose Rock. Computer chose Scissors. You win!\
+Please choose:\
+1) Rock\
+2) Paper\
+3) Scissors\
+4) Quit\
+> 4\
+Thanks for playing!\
+}

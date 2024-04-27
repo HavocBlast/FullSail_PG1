@@ -1,0 +1,413 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Bold;\f1\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Practice 1\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Write a stern program that asks the user to enter a number within some range.\'a0 If the user tries to joke around and input something incorrect, ask again, and again, and again, until they learn to get it right. Use input validation in a loop until the user enters correct input.\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b \cf0 Example Output
+\f1\b0 \
+Please enter a number (1-10): -1\
+Please enter a number (1-10): 0\
+Please enter a number (1-10): 11\
+Please enter a number (1-10): ldkfjdlj\
+Please enter a number (1-10): true\
+Please enter a number (1-10): 3.8\
+Please enter a number (1-10): 7\
+You entered: 7 (finally)\
+\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Practice 2\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Revisit any program in a previous lab and update it to include input validation.\'a0 We recommend completely re-writing the program from scratch, instead of simply copying it and inserting input validation.\'a0 This speeds up the process of learning a new programming language.\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b \cf0 Example Output
+\f1\b0 \
+Quotes on Demand!\
+--------------------------\
+1 \'96 Mark Twain\
+2 \'96 Jiddu Krishnamurti\
+3 \'96 Graham Priest\
+--------------------------\
+Choose wisely: klsdfj\
+Choose wisely: 0\
+Choose wisely: 4\
+Choose wisely: Mark Twain\
+Choose wisely: 2.9\
+Choose wisely: 3\
+"Scientific advances are often triggered by taking oddities seriously."\
+\'a0\'a0- Graham Priest\
+\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Practice 3\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Use a for loop to print the multiples of 10 between 1 and 100.\'a0 Do this by looping 100 times and using a continue statement to skip loop iterations which are not multiples of 10.\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b \cf0 Example Output
+\f1\b0 \
+Multiples of 10:\
+10 20 30 40 50 60 70 80 90 100\
+\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Practice 4\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Use a for loop to print the multiples of 10 between 1 and 100.\'a0 Do this by looping only 10 times, perhaps by changing the update expression of the loop.\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b \cf0 Example Output
+\f1\b0 \
+Multiples of 10:\
+10 20 30 40 50 60 70 80 90 100\
+\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Practice 5\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Rewrite the program for Gentle Jerry's Generic Goods to be even better!\'a0 This time add input validation, a loop to allow the user to buy more goodies, and an option to quit buying.\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b \cf0 Example Output
+\f1\b0 \
+Welcome to Gentle Jerry's Generic Goods!\
+\'a01) Sword\'a0 - 5 gold\
+\'a02) Shield \'96 8 gold\
+\'a03) Potion - 3 gold/ounce\
+\'a04) Nothing, quit.\
+What would you like to buy? Sword\
+What would you like to buy? 1\
+How many? 3\
+What would you like to buy? Kdjfld\
+What would you like to buy? 0\
+What would you like to buy? 3\
+How much? 10\
+What would you like to buy? Your prices are getting damn expensive, Jerry!\
+What would you like to buy? I HATE YOU!!!!\
+What would you like to buy? 4\
+3 Swords 15 gold\
+10 Potion 30 gold\
+------------------------------\
+Subtotal 45 gold\
+5% sales tax 2.25 gold\'a0\
+------------------------------\
+Total 47 gold, 25 silver\
+\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Practice 6\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Create a \'93Guess the Number!\'94 game.\'a0 Initialize an unsigned integer to store a random number in the range 1 -> 100 and declare another unsigned integer to store the user's guess.\'a0 Ask the user for their guess.\'a0 Then write a loop to keep running until the user guesses the number. If the user guesses the correct number, stop the loop and display a win message.\'a0 Within the loop tell them if they are too high or too low and ask for the next guess.\'a0 Finally, if the user enters 0, display the random number and stop the loop (essentially allowing them to quit the game).\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b \cf0 Example Output
+\f1\b0 \
+Let\'92s play Guess The Number (1-100)\
+What\'92s your guess? 75\
+Too high!\
+What\'92s your guess? 20\'a0\
+Too low!\
+What\'92s your guess? 45\'a0\
+Too high!\
+What\'92s your guess? 31\
+That's right!\
+\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Practice 7\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Use a loop and an array to generate a list of 10 random numbers between the ranges of 1 and 100, inclusive.\'a0 Then loop through the array again and print out all the numbers.\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b \cf0 Example Output
+\f1\b0 \
+Your 10 random numbers are:\
+32 52 88 49 74 88 68 13 27 44\
+\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Practice 8\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 String types actually contain an array of char types inside of them.\'a0 You can access this array of chars by using the array subscript operator (the brackets []) on the string itself.\'a0 Now that you know this, ask the user to enter a message and read it into a string variable.\'a0 Then loop through the characters of the string backwards to print the message out in reverse.\'a0\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b \cf0 Example Output
+\f1\b0 \
+Please enter a message to reverse:\
+Hello, World!\
+Here is your message reversed:\
+!dlroW ,olleH\
+\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Practice 9\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Define an array of strings, initializing it with some names of your choice.\'a0 Ask the user to specify which name they would like to search for.\'a0 Next, search your array for the name the user specified, by iterating through the array and comparing their search term with each element of the array. Then let the user know if the name was found in the array or not.\'a0 Finally, print out the array of strings so the user can verify.\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b \cf0 Example Output
+\f1\b0 \
+Which player would you like to look for: Luigi\
+Yes, Luigi is in the list!\
+Look for yourself:\
+Mario, Luigi, Peach, Toad,\
+\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Practice 10\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Define and initialize an array of 10 random sales figures (floating point numbers).\'a0 Then iterate through the array of numbers and compute the following:\
+\'95 total sales\
+\'95 average sale\
+\'95 highest sale\
+\'95 lowest sale\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b \cf0 Example Output
+\f1\b0 \
+Sales: 2.62, 4.13, 3.68, 4.44, 0.52, 8.28, 1.86, 5.64, 8.86, 6.59,\
+Total: \'a0 46.62\
+Average: 4.662\
+Highest: 8.86\
+Lowest:\'a0 0.52\
+\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Practice 11\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Time to play the Lotto!\'a0 Define two arrays of 5 unsigned short integers.\'a0 One array is for the user's guesses and the other is for the lotto numbers.\'a0 Using a for loop, randomize the five lotto numbers to be in the range: 1 -> 100.\'a0 Using another for loop, ask the user for their five lotto picks.\'a0 Then display the random lotto numbers to the user.\'a0 To calculate the user's winnings, use a for loop and check if each element in the user's array is equal to a corresponding element in the lotto array (user[i] == lotto[i]).\'a0 Increase a winnings variable by 10 for each matching number.\'a0\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b \cf0 Example Output
+\f1\b0 \
+Enter your pick for lotto ball #1: 4\
+Enter your pick for lotto ball #2: 8\
+Enter your pick for lotto ball #3: 15\
+Enter your pick for lotto ball #4: 16\
+Enter your pick for lotto ball #5: 23\
+Lotto Numbers are: 20 68 65 23 27\
+You win $0!\
+\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Practice 12\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Let\'92s modify the previous lab to improve our chances of winning.\'a0 Instead of checking for a matching number in the corresponding position, we could check if a user's pick matches any of the lotto numbers.\'a0 So to calculate the winnings, write a for loop to iterate through the user's five numbers, and within that loop, write a nested for loop to iterate through the five lotto numbers (NOTE: You must use different names for the loop counters.\'a0 Both counters shouldn\'92t be called i!)\'a0 Increase the winnings variable by 10 for each matching number (or make the increase exponential if you want more money ).\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b \cf0 Example Output
+\f1\b0 \
+Enter your pick for lotto ball #1: 4\
+Enter your pick for lotto ball #2: 8\
+Enter your pick for lotto ball #3: 15\
+Enter your pick for lotto ball #4: 16\
+Enter your pick for lotto ball #5: 23\
+Lotto Numbers are: 76 96 48 84 4\
+You win $10!\
+\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Practice 13\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Write an extreme version of the Hello World program.\'a0 Write the following function, which prints \'93Hello, World!\'94 to the screen once:\'a0\
+static void PrintGreeting()\
+Now, create an indefinite loop that simply calls your function over and over again each loop iteration.\'a0 Note that you will have to hard kill this program since there is no stopping condition to your loop.\
+Example Output\
+Hello, World!\
+Hello, World!\
+Hello, World!\
+...\
+\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Practice 14\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Write a power function which computes one value raised to the power of another and then returns the result (i.e. f(base, exp) = base exp ).\'a0 The function header should look like this:\
+static int Power(int x, int exp)\
+Now, outside the function, perhaps in Main, ask the user for both a base and an exponent, with input validation, and call the function passing those inputs as arguments.\'a0 Catch the return value of the function and display it on the screen.\
+Example Output\
+Base: ksdjf\
+Base: 10\
+Exponent: 3\
+10 raised to the 3 power is 1000\
+\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Practice 15\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Write a function to convert degrees to radians.\'a0 This function is useful because most System.Math library functions take radians as arguments, not degrees.\'a0 Use the following conversion formula:\
+\'95 radians\'a0 =\'a0 degrees * \uc0\u960  / 180.0\
+Once written, ask the user for some degrees, call your function to convert, and then display the result.\'a0\'a0\
+Example Output\
+Enter degrees: kdjfd\
+Enter degrees: 180\
+Radians: 3.14159265358979\
+\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Practice 16\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Create a function to calculate a factorial.\'a0 First, use input validation to ask the user for an integer, ensuring the user does not enter a negative value, floating-point value, or non-numeric text.\'a0 After the input validation, pass the integer to your function and within the function write a for loop to start the counter at the user's input, run as long as the counter is greater than or equal to 1, decreasing the counter by 1 each time.\'a0 Within the loop, multiply the counter variable into a product variable that starts at 1 (product *= i).\'a0 Have the function return the factorial product.\'a0 Main should display the final answer.\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b \cf0 Example Output
+\f1\b0 \
+What number would you like a factorial of? five\
+What number would you like a factorial of? -5\
+What number would you like a factorial of? 5\
+Calculating 5! ...\
+5 x 4 x 3 x 2 x 1\
+120\
+\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Practice 17\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Write a program to display the multiples of a number up to another number (thus the second number should be greater than or equal to the first number).\'a0 The function itself should start at the first number and loop until reaching the second number.\'a0 The function header should look like this:\
+\'a0\
+static void Multiples(int number, int max)\
+Outside the function, ask the user for two numbers, storing them into integer variables.\'a0 Then call your function sending the user's numbers as inputs.\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b \cf0 Example Output
+\f1\b0 \
+Enter a number: 7\
+Enter a max:\'a0 \'a0 100\
+The multiples of 7 up to 100 are: 7 14 21 28 35 42 49 56 63 70 77 84 91 98\
+\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Practice 18\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Write a program to detect if a number is prime or not.\'a0 Create a function that takes a number in as input, detects if it is prime, and then returns a boolean indicating if the number is prime or not. There are various ways to check if a number is prime, though the easiest way (to understand) is to simply loop through all values from 2 \'96 (number / 2), inclusive, and see if any of those values divide evenly into the number.\'a0 If none of those values divide evenly into the number, then the number is prime.\
+Example Output\
+Enter a number to detect primality: 7\
+7 is prime!\
+Enter a number to detect primality: 38\
+38 is not prime!\
+\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Practice 19\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Pick any one of your previous labs (from a previous day) and rewrite it, but this time use functions wherever you can to make your code more modular and maintainable.\
+\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Practice 20\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 In graphics, a BLIT (BLock Image Tranfer) is when you copy some (or all) of the pixels in an image and paste them onto another image or pixel buffer.\'a0 This is essentially how developers accomplished rendering 2D graphics.\'a0 An image itself is pretty much a 2D array of pixels.\'a0 The image copied from is generally called the source (abbr., src), and the image you copy to is called the destination (abbr., dest).\'a0 Here is an example from a slide in your upcoming graphics course.\
+We can simulate a BLIT in a Console environment as well.\'a0 We don't have access to images and pixels, but we can use 2D arrays of characters.\'a0 The Console window itself is essentially a 2D array of characters.\'a0 So if we create another 2D array of characters representing our "image," we can then copy those characters from the "image" 2D array to the Console window to achieve the effect of drawing an ASCII "image" onto the screen.\
+Here is an example of a 2D array ASCII "image":\
+char[,] image =\
+\{\
+\{ ' ', '(', '\\\\', '_',\'a0 '/', ')', ' ' \},\
+\'a0\'a0\'a0\'a0\{ '(', '=', '\\'', '.', '\\'', '=', ')' \},\
+\'a0\'a0\'a0\'a0\{ '(', '"',\'a0 ')', '_',\'a0 '(', '"', ')' \},\
+\};\
+Make a function that takes as input a 2D char array, an int for the starting x position, and an int for the starting y position to draw the image at.\'a0 Here is an example of what that function prototype might look like:\
+static void DrawImage(int xpos, int ypos, char[,] src)\
+Within the function, all you need to do is iterate over the 2D array and write to the Console window each character of the 2D array.\'a0 Remember, the indexes in the 2D array are not the same values as the locations on the screen; the screen positions are at an offset of the starting x and y positions.\'a0\
+NOTE: 2D arrays are usually accessed by row first, then column.\'a0 This means if you make a nested for loop to iterate through each index of the 2D array, your outer for loop would iterate over the rows of the 2D array, and your inner for loop would iterate over the columns of the 2D array.\'a0 To get the dimensions of the 2D array from within the function, you can use the array.GetLength(...) method and pass which dimension you want the size of.\
+NOTE:\'a0 If you try to Console.SetCursorPosition(...) outside the bounds of the Console window, an exception (crash) will occur.\'a0 Right before you call Console.SetCursorPosition(...), perhaps you should check to make the location is on screen, and only that char if it is on screen.\
+\uc0\u8232 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Practice 21\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Write a function to rotate a list of numbers in place, meaning given an array of numbers as input, it rotates them left or right in the same array.\'a0 If rotating an array of numbers to the right, the numbers that fall off the end of the array are moved to the beginning of the array.\'a0 If rotating an array of numbers to the left, the numbers that fall off the beginning of the array are moved to the end.\'a0 See the Example Output.\'a0 The function header should look like this:\
+static void Rotate(int[] list, int places, bool left)\
+Once you write the function, test it by generating an array of 10 random numbers between 0 and 99, and then pass the array to the function to rotate it some number of places either left or right.\'a0 Then display the array of numbers again.\'a0 You could even ask the user how many places they\'92d like to rotate the array, and in which direction, to make the program more dynamic/useful.\'a0\'a0\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b \cf0 Example Output
+\f1\b0 \
+Original: 13, 42, 69, 26, 68, 55, 17, 20, 40, 88,\
+How many places to rotate? 4\
+Which direction to rotate? (l for left, r for right): r\
+Rotated:\'a0 17, 20, 40, 88, 13, 42, 69, 26, 68, 55,\
+\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Practice 22\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Write a function to sort a list of numbers in place, meaning given an array of numbers as input, it sorts them in the same array.\'a0 After a call to this function, this list of numbers should be sorted.\'a0 The function header should look like this:\
+static void SortList(int[] list)\
+Once you write the function, test it by generating an array of 10 random numbers between 0 and 99, and pass the array to the function to sort it.\'a0 Then display the array of numbers again.\
+You are welcome to use any algorithm you wish to sort the numbers, provided that you actually implement the algorithm, and not simply call a library sort function.\'a0 We recommend you use Insertion Sort as it is both easy to understand and efficient for an iterative sort.\'a0 Bubble Sort is even easier to understand, though not as efficient.\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b \cf0 Example Output
+\f1\b0 \
+Original: 37, 27, 80, 27, 68, 51, 96, 20, 60, 80,\
+Sorted: \'a0 20, 27, 27, 37, 51, 60, 68, 80, 80, 96,\
+\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Practice 23\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Do the same lab as above, except this time use strings.\'a0 Create an array of strings (or perhaps read words from the user), and then pass that array to a function to sort it.\'a0 Note that you can use the exact same sorting algorithm as above, except for the fact that you are comparing strings instead of numbers.\'a0 You can compare strings with the String.Compare() function, and the return value is one of three values, representing if the first string is either greater than, equal to, or less than the second string.\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b \cf0 Example Output
+\f1\b0 \
+Original: Fry, Farnsworth, Leela, Hermes, Bender, Amy, Zoidberg, Scruffy\
+Sorted: \'a0 Amy, Bender, Farnsworth, Fry, Hermes, Leela, Scruffy, Zoidberg\
+\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Practice 24\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Create a function to calculate the volume of a sphere.\'a0 First, use input validation to ask the user for the radius of a sphere using a floating-point (decimal) number, ensuring the user does not enter a negative value or non-numeric text.\'a0 After the input validation, pass the radius to a function and calculate the volume of the sphere using the formula 4\uc0\u960 r3/3, returning the volume.\'a0 Then display the volume.\'a0 Use Google to find the value of \u960  up to 4 decimal places, or use the Math.PI constant.\'a0 Don\'92t worry if the output has too many decimal places.\'a0 You can always call\'a0 volume.ToString(\'930.00\'94) if you want to limit the number of decimal places to two.\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b \cf0 Example Output
+\f1\b0 \
+What is the radius of the sphere? five\
+What is the radius of the sphere? -1\
+What is the radius of the sphere? 2.5\
+The volume of the sphere is 65.45\
+\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Practice 25\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Make a program that produces a stack-overflow exception\'85\
+HINT: Use recursion.\
+\
+}

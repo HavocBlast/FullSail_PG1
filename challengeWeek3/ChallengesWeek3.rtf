@@ -1,0 +1,503 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Bold;\f1\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Practice 1\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 To get a good introduction to using objects, make an instance of the Random class.\'a0 Now use that instance to generate random numbers instead of using our Utility class.\'a0 The method that you want to call from your Random instance is called Next(); it will return to you a random number.\'a0 Why don't you generate 5 random numbers now using this method?\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b \cf0 Example Output
+\f1\b0 \
+Number 1: 1537474548\
+Number 2: 430446604\
+Number 3: 1770311\
+Number 4: 591002556\
+Number 5: 786825322\
+\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Practice 2\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Write a program to sum all the numbers between 1 and 10000, inclusive.\'a0 Do this two different ways using the following algorithms.\'a0\
+1. Loop from 1 to 10000 and sum all the values\
+2. Use Gauss\'92 Sum (http://mathcentral.uregina.ca/QQ/database/QQ.02.06/jo1.html)\
+Finally, use the System.Diagnostics.Stopwatch class to perform timings on the two solutions.\'a0 Use the class by first making an instance of it.\'a0 You can use the methods: Start(), Stop(),\'a0 and Reset() to control when the Stopwatch object is running or not running.\'a0 You should start the Stopwatch at the start of an algorithm, and then stop it as soon as the algorithm is finished.\'a0 Then use ElapsedTicks after each solution to see how many processor ticks it took to compute that algorithm.\
+The point of this lab is to prove to you that some algorithms are a lot more efficient than other algorithms.\'a0 It also forces you to use an object.\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b \cf0 Example Output
+\f1\b0 \
+Solution 1: loop through all numbers\
+Sum: \'a0 50005000\
+Ticks: 403\
+Solution 2: Gauss's sum\
+Sum: \'a0 50005000\
+Ticks: 3\
+\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Practice 3\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Make a class called MyFirstClass with no member variables and a single public default constructor, which only writes the line \'93Constructor!\'94 to the Console.\'a0 Now in your Main initialize several instances of your class.\'a0 Use the debugger to step through your program line by line.\'a0 You should see in the Console window, the output \'93Constructor!\'94 whenever each object\'92s default constructor is called.\
+Now, modify your program to define an array of MyFirstClass objects.\'a0 By making an array of the objects, you\'92d expect each object\'92s default constructor to be called, right?\'a0 But the question is, did you actually create each object in the array, or just the array itself?\'a0 What happens when you run your program; is there a \'93Constructor!\'94 output for each object in the array?\'a0 If so, how?\'a0 If not, why?\'a0 How could you change the program to ensure that each object in the array has its constructor called?\
+\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Practice 4\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Make a MilitaryClock class that stores and displays military time.\
+Your class should contain the following private fields (member variables):\
+short hours;\
+short minutes;\
+Your class should support the following constructors and methods (member functions):\
+MilitaryClock();\
+MilitaryClock(short h, short m);\
+void SetTime(short h, short m);\
+void Display();\
+Here is an example of using your new class:\
+MilitaryClock mc = new MilitaryClock();\
+mc.Display();\
+mc = new MilitaryClock(7, 0);\
+mc.Display();\
+mc.SetTime(12, 15);\
+mc.Display();\
+Don\'92t forget to write the preceding 0 before the hours and/or minutes if less than 10.\'a0 You can use a simple if statements to do this, or a more complex format specification when printing.\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b \cf0 Example Output
+\f1\b0 \
+0000\
+0700\
+1215\
+\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Practice 5\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Earlier you completed a lab that computed statistics on the daily sales figures.\'a0 This time, wrap all of that in a class.\'a0 You should be able to pass an array of sales figures (floats) into an object of the class, and then call methods to retrieve various statistics on it, such as the total sales, average sale, highest sale, etc.\
+Here is an example of using your new class:\
+SalesSummary ss = new SalesSummary();\
+ss.SetSales(arrayOfSales);\
+ss.PrintSales();\
+Console.WriteLine(\'93Total: \'94 + ss.GetTotalValue());\
+Console.WriteLine(\'93Average: \'94 + ss.GetAverageSale());\
+Console.WriteLine(\'93Highest: \'94 + ss.GetHighestSale());\
+Console.WriteLine(\'93Lowest: \'94 + ss.GetLowestSale());\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b \cf0 Example Output
+\f1\b0 \
+Sales: 2.62, 4.13, 3.68, 4.44, 0.52, 8.28, 1.86, 5.64, 8.86, 6.59,\
+Total: 46.62\
+Average: 4.662\
+Highest: 8.86\
+Lowest: 0.52\
+\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Practice 6\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Make a Circle class.\'a0 It should hold a 2D coordinate and a radius, and have a function for drawing the circle on the screen.\
+Your class should contain the following private fields (member variables):\
+float mX;\
+float mY;\
+float mRadius;\
+Your class should support the following constructors and methods (member functions):\
+Circle(float x, float y, float radius);\
+Draw();\
+Here is an example of using your new class:\
+Circle c1 = new Circle(Console.WindowWidth/2, Console.WindowHeight/2, 10);\
+c1.Draw();\
+To draw a circle on the screen, think about a unit circle. \'a0 A point (x, y) on the edge of a circle can be computed by taking the COS(angle) and the SIN(angle) respectively.\'a0 So all you have to do is loop through all angles that you want to compute an (x, y) coordinate for.\'a0 For example, if we made a for loop where i went from 0 to 360, then i would represent the angle.\'a0 Now all we have to do is take the COS and SIN of the angle to get the (x, y) at each angle, and draw a point on the screen at that location.\
+Three things to keep in mind:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls1\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Math.Cos() and Math.Sin() take arguments in RADIANS, not ANGLES, so you must first convert your angle to radians.\'a0 You can do so with the equation: angle * Math.PI / 180.0\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 After you compute (x, y) for each angle, note that the (x, y) you just computed is with respect to a unit circle at the origin of a Cartesian graph.\'a0 You can think of that (x, y) as an offset from the center of the circle.\'a0 So you must finally draw something at that (x, y) PLUS the center point of the circle.\'a0 Those two coordinates added together will represent the final location of where to draw that point on the circle's surface.\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 The circle may not look very circular because the default font in the Console window does not have a square aspect ratio.\'a0 If you want it to look truly circular, change the Font in the Properties of the Console window to a square aspect ratio font, such as 8x8.\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \uc0\u8232 \u8232 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Practice 7\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Earlier you completed a lab that printed out a message backwards.\'a0 This time, make a class called PrettyPrinter, which given a message (perhaps one read in from the user) can be called with methods to print the message in different ways.\'a0 You will have to loop through the characters in the message in a certain order.\'a0 For example, one method could print the message normally to the screen wherever the Console cursor currently is, another could print the message backwards, another could print it with spaces, another could print it vertically, etc.\'a0 Here is an example of how you might use the class:\
+Here is an example of using your new class:\
+PrettyPrinter pp = new PrettyPrinter();\
+pp.SetMessage(\'93Hello!\'94);\
+pp.Print(); // print normally\
+pp.PrintReversed(); // print reversed\
+pp.PrintSpaced(3); // spaces between characters\
+pp.PrintVertically(); // each character on a new line\
+You could even support multiple constructors, colors, and a way to specify the cursor position to print at:\
+PrettyPrinter pp = new PrettyPrinter(\'93YOLO\'94);\
+pp.SetColor(ConsoleColor.Blue);\
+pp.PrintAt(30, 0); // print at a specified cursor position\
+Example Output\
+Hello!\
+!olleH\
+H \'a0 e \'a0 l \'a0 l \'a0 o \'a0 !\
+H\
+e\
+l\
+l\
+o\
+!\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0YOLO\
+\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Practice 8\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Make a CoinPouch class to store and organize coins.\
+Your class should contain the following private fields (member variables):\
+ushort[] coins; // coin counts: quarters, dimes, nickels, pennies\
+Your class should support the following constructors and methods (member functions):\
+CoinPouch(); // does nothing\
+CoinPouch(uint money); // calls the SetTotal() method\
+void SetTotal(uint money); // converts money to coins internally\
+uint GetTotal(); // sums up all coins and returns total\
+void Display(); // displays all the coins\
+The SetTotal() method should take a total amount of money in cents, and figure out how many coins of each type would need to be stored inside the CoinPouch.\'a0 We will use a greedy algorithm as follows:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls2\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 coins[0] = money parameter divided by 25.\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Then assign the money parameter to the remainder of money modulus 25.\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 coins[1] = money parameter divided by 10.\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Then assign the money parameter to the remainder of money modulus 10.\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 coins[2] = money parameter divided by 5.\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Then assign the money parameter to the remainder of money modulus 5.\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 coins[3] = what\'92s left in the money parameter.\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 The GetTotal() method should iterate through all the coins and sum up their total value:\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Initialize a separate array of 4 ushorts called coinValues, with the values \{ 25, 10, 5, 1\}.\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Use a for loop to iterate through the coins array and the coinValues array at the same time and multiply the number of coins of each type times their value, summing up a total each iteration.\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Return the total sum.\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \
+Here is an example of using your new class:\
+CoinPouch wallet = new CoinPouch(342);\
+wallet.Display();\
+Console.WriteLine(\'93Total: \'94 + wallet.GetTotal());\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b \cf0 Example Output
+\f1\b0 \
+13\'a0 \'a0 \'a0 Quarters\
+1 \'a0 \'a0 \'a0 Dimes\
+1 \'a0 \'a0 \'a0 Nickels\
+2 \'a0 \'a0 \'a0 Pennies\
+Total: 342 cents\
+\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Practice 9\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Earlier you wrote a Magic 8-Ball program.\'a0 This time, make a Magic8Ball class with a method for querying it.\'a0 Then make an instance of your newly created Magic8Ball class.\'a0 Upon querying the instance, it could return an enum value, which could then be mapped to an array of strings, or it could just return the actual string response itself.\
+Your class should contain an enum declaration similar to the following:\
+public enum Response\
+\{\
+\'a0\'a0StronglyNegative, Negative, SlightlyNegative,\
+\'a0\'a0Ambivalent,\
+\'a0\'a0SlightlyPositive, Positive, StronglyPositive\
+\};\
+Your class should contain the following private fields (member variables):\
+Random PRNG;\
+string[] Responses = new string[]\
+\{\
+\'a0\'a0\'93Absolutely NOT!\'94, \'93No.\'94, \'93I don\'92t think so\'85\'94,\
+\'a0\'a0\'93Hmmm\'85 maybe?\'94,\
+\'a0\'a0\'93I believe so\'85\'94, \'93Yes.\'94, \'93Hell YES!\'94\
+\};\
+Your class should support the following public constructors and methods (member functions):\
+public Magic8Ball(); // assign the PRNG\
+public Response Query(); // return a random response\
+public string GetResponseText(Response r); // get message given a response\
+Here is an example of using your new class:\
+Magic8Ball prophet = new Magic8Ball();\
+Magic8Ball.Response answer = prophet.Query();\
+Console.WriteLine(prophet.GetResponseText(answer));\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b \cf0 Example Output
+\f1\b0 \
+Think of a yes/no question...\
+Press ENTER to continue.\
+Absolutely NOT!\
+\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Practice 10\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Earlier you wrote a Circle class, which was used to make circle objects and draw them on the screen.\'a0 Now add the option to draw them as filled-in circles, instead of just empty circles.\'a0 This may sound challenging, but the algorithm for drawing a filled-in circle is actually easier than drawing an empty circle.\
+Add the following private field (member variable) to your Circle class:\
+bool mShaded;\
+Then add the ability to be able to specify whether the circle should be filled-in or not:\
+Circle(float x, float y, float radius, bool shaded);\
+SetShaded(bool shaded);\
+Here is an example of using your new class:\
+Circle c = new Circle(Console.WindowWidth/2, Console.WindowHeight/2, 10, true);\
+c.Draw();\
+Finally, have the Circle's Draw() method check the value of the mShaded boolean, to determine if it should draw the filled-in portion of the circle as well.\'a0 If not, just use your previous algorithm to draw the outside of the circle.\'a0 If so, then draw both the outside and the inside, using the algorithm below.\
+To draw a filled-in circle, picture a square that is snuggly surrounding the circle.\'a0 Thus, each side of the square has a length of 2 * the radius of the circle (i.e. the diameter of the circle).\'a0 Below is a picture of the square area you should be thinking about.\'a0 Now, iterate through each coordinate of that square and simply check if the distance from that coordinate to the center of the circle is less than the radius of the circle.\'a0 If the distance from a coordinate to the center of the circle is less than the circle radius, it means that the coordinate is within the circle; otherwise it means that it is outside the circle.\'a0 So for each coordinate in that square, if it is within the circle, draw something at that coordinate, otherwise don't draw anything.\'a0\
+\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Practice 11\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Earlier you made a class called MyFirstClass which had nothing more than a single default constructor which contained the printout \'93Constructor!\'94\'a0 Modify this class to also have a destructor with the print out \'93Destructor!\'94\
+When you make instances of your class, you should see the print out \'93Constructor!\'94 on the screen.\'a0 However, you probably won\'92t see \'93Destructor!\'94 until the very last second of execution because destructors are only called when objects are deallocated, and because C# is a managed language, the garbage collector determines when unused objects will be deallocated (which may not be until the end of the life of the program). If you're lucky, you might see "Destructor!" flash on the screen real quick right before the Console window shuts down.\
+As an experiment, after you create an instance of MyFirstClass, set it to null, and then invoke the garbage collector by calling GC.Collect(). If you use the debugger to step past the garbage collector call, you should see the \'93Destructor!\'94 printout written to the screen, indicating that the garbage collector deallocated your object. You may have to step the debugger a few statements before this happens. This at least should prove to you that a destructor is called when an instance is deallocated.\
+NOTE: In general you should refrain from invoking the garbage collector manually.\
+\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Practice 12\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Create an ATM-ish program that allows a user to access their bank account (assume they\'92ve already verified their identity). First, create a BankAccount class with the information below, then in Main, allocate a default BankAccount object and then in an indefinite loop, display a menu of choices, which correspond to methods to be called on the BankAccount object. Break out of the loop when the user indicates they\'92d like to exit.\
+Your BankAccount class should contain the following private fields (member variables):\
+string mCustomer;\
+float mBalance;\
+Your BankAccount class should support the following constructors and methods (member functions):\
+BankAccount();\
+BankAccount(string customerName, float initialBalance);\
+void SetCustomer(string customerName);\
+string GetCustomer();\
+float GetBalance();\
+bool Credit(float amount);\
+bool Debit(float amount);\
+The only way to change the balance after the BankAccount object has been created is to call the Credit and Debit methods.\'a0 Both of those methods shouldn\'92t allow negative transactions (e.g. debiting more than the account has in it).\'a0 Both methods should return a bool to indicate if they were able to perform their action successfully or not.\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b \cf0 Example Output
+\f1\b0 \
+--------------------------\
+Welcome to Federation Bank\
+--------------------------\
+1) Display Account Info\
+2) Change Customer Name\
+3) Credit\
+4) Debit\
+5) Exit\
+--------------------------\
+What would you like to do? 1\
+Account: (no name) $0\
+What would you like to do? 2\
+What is the new name? John von Neumann\
+What would you like to do? 3\
+How much? 500\
+What would you like to do? 3\
+How much? 100\
+What would you like to do? 1\
+Account: John von Neumann $600\
+What would you like to do? 4\
+How much? 1000\
+Invalid transaction!\
+What would you like to do? 4\
+How much? 50\
+What would you like to do? 1\
+Account: John von Neumann $550\
+What would you like to do? 5\
+Thank you for choosing Federation Bank!\
+\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Practice 13\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 You already created a Circle class in a previous lab.\'a0 Now add an IsColliding() method to check if a Circle object is colliding with another Circle object, the one passed into the method.\
+You should add the following method (member function) to your Circle class:\
+public bool IsColliding(Circle other);\
+To help you solve this collision problem, on a piece of paper, draw out 2 circles that are colliding, and draw 2 circles that are disjoint. Now try and see if you can figure out how to determine if they are colliding or not. Think about the distance between the center points of the two circles relative to the radiuses of the two circles. The problem is surprisingly simple if you use the Pythagorean theorem and the radiuses of the two circles. If you cannot figure this out on your own, search on the Internet for an existing algorithm.\
+Here is an example of using your Circle class and the new method you just added:\
+Circle c1 = new Circle( ... );\
+Circle c2 = new Circle( ... );\
+c1.Draw();\
+c2.Draw();\
+bool collision = c1.IsColliding(c2);\
+// print out whether there is a collision or not\
+\uc0\u8232 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Practice 14\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Create a TextCodec class to handle encrypting and decrypting messages.\
+Your TextCodec class should contain the following private fields (member variables):\
+sbyte offset;\
+Your TextCodec class should support the following constructors and methods (member functions):\
+TextCodec(); // calls SetOffset(0)\
+TextCodec(sbyte offset); // calls SetOffset(offset)\
+void SetOffset(sbyte offset); // sets offset to the offset passed in\
+string Encode(string message); // encodes the message and returns it\
+string Decode(string message); // decodes the message and returns it\
+Because characters are actually numeric values themselves in memory, you can actually increment or decrement the character's values in order to reference other characters.\'a0 In this program, when encoding, you will iterate through the message, character by character, and add the offset to each character in the message.\'a0 When decoding, you will iterate through the message, character by character, and subtract the offset from each character in the message.\
+Use the System.Text.StringBuilder class to help you.\'a0 The StringBuilder class is almost identical to the String class.\'a0 The only real difference is that it is mutable, which means the characters of the StringBuilder can be changed (whereas they cannot be changed in a String class, because String is immutable).\'a0 Use the StringBuilder class like so:\
+StringBuilder sb = new StringBuilder(message);\
+for (int i=0; i<message.Length; i++)\
+sb[i] = (char)(sb[i] + offset);\'a0 // add offset to each letter to encode,\
+\'a0subtract to decode\
+string encoded = sb.ToString();\
+NOTE: Your TextCodec class has a member variable called offset, and several of the methods take as input a parameter called offset as well.\'a0 Thus, you will have to manually resolve this name collision using the\'a0 this\'a0 reference.\
+NOTE: If you use a large offset, it is possible that some of the characters will be encrypted as characters that cannot be printed out properly in the Console window; instead they will appear as\'a0 ?\'a0 symbols.\'a0 When you copy your encrypted text and enter it back in, you are copying the\'a0 ?\'a0 characters themselves, not the character that should have been printed out but couldn't because of limitations in the Console font.\'a0 When those characters are decrypted in your program, your program will think they are actually ?\'a0 characters, which are value 63 in the ASCII table, instead of the character they should really be but you can't see in Console, and thus compute an offset from there, which in turn will not give you your original unencrypted message.\'a0 This is a known issue due to lack of Unicode character support in Console.\
+Example Output\
+-------------------\
+1) Set offset\
+2) Encode a message\
+3) Decode a message\
+4) Exit\
+-------------------\
+What would you like to do? 1\
+What offset? 5\
+-------------------\
+1) Set offset\
+2) Encode a message\
+3) Decode a message\
+4) Exit\
+-------------------\
+What would you like to do? 2\
+What message? Hello, World\
+Encoded: Mjqqt1%\\twqi\
+-------------------\
+1) Set offset\
+2) Encode a message\
+3) Decode a message\
+4) Exit\
+-------------------\
+What would you like to do? 3\
+What message? Mjqqt1%\\twqi\
+Decoded: Hello, World\
+-------------------\
+1) Set offset\
+2) Encode a message\
+3) Decode a message\
+4) Exit\
+-------------------\
+What would you like to do? 4\
+\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 Practice 15\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Create a database of alien life forms.\'a0 Make an Alien class with at least the following information, then in Main allocate an array of Aliens with various information, and then in an indefinite loop, display a menu of choices, which allow the user to search the array of Aliens in various ways.\'a0 Break out of the loop when the user indicates they\'92d like to exit.\
+Your Alien class should contain the following private fields (member variables):\
+string mSpecies;\
+string mPlanet;\
+float mPopulation; // billions\
+bool mHumanoid;\
+Your Alien class should support the following constructors and methods (member functions):\
+Alien();\
+void Define(string species, string planet, float pop, bool humanoid);\
+string GetSpecies();\
+string GetPlanet();\
+float GetPopulation();\
+bool IsHumanoid();\
+void DisplayInfo();\
+In Main, you are welcome to initialize the database however you wish, but an easy way is to:\
+\'95 Initialize an array of 5 strings of names of alien species (whatever you want).\
+\'95 Initialize an array of 9 strings of planet names (whatever you want).\
+\'95 Define an array of 5 Alien objects.\
+\'95 Loop through the Alien object array and for each one call its Define method with:\
+o the name of the species from the species name array\
+o a random planet from the planet name array\
+o a random population between 0.1 and 10.0\
+o a random bool to indicate if the Alien is humanoid or not\'a0\
+Then define a few functions in your Program, which can be called from Main, all of which search the list of Aliens by looking for a specific piece of information, and call the Display method of any Alien that contains the information searched for:\
+void SearchBySpecies(Alien[] aliens, string species);\
+void SearchByPlanet(Alien[] aliens, string planet);\
+void SearchByHumanoid(Alien[] aliens, bool humanoid);\
+Example Output\
+----------------------------\
+The Federation Archives\
+----------------------------\
+1) Search by species\
+2) Search by planet\
+3) Search by humanoid\
+4) Exit\
+----------------------------\
+What would you like to do? 1\
+What species? Bolian\
+----------------------------\
+Species: Bolian\
+Planet: Adelphous IV\
+Population: 3.8 billion\
+Humanoid: True\
+----------------------------\
+What would you like to do? 1\
+What species? Cardashian\
+----------------------------\
+The species Cardashian is unknown.\
+----------------------------\
+What would you like to do? 2\
+What planet? Earth\
+----------------------------\
+No signs of life on planet Earth.\
+----------------------------\
+What would you like to do? 2\
+What planet? Rigel V\
+----------------------------\
+The planet Rigel V is unknown.\
+----------------------------\
+What would you like to do? 2\
+What planet? Rigel VII\
+----------------------------\
+Species: Ferengi\
+Planet: Rigel VII\
+Population: 9.2 billion\
+Humanoid: True\
+--\
+Species: Andorian\
+Planet: Rigel VII\
+Population: 4.1 billion\
+Humanoid: True\
+----------------------------\
+What would you like to do? 3\
+Humanoids (y or n)? n\
+----------------------------\
+Species: Gorn\
+Planet: Camus II\
+Population: 1.5 billion\
+Humanoid: False\
+--\
+Species: Tholian\
+Planet: Malon Prime\
+Population: 8.7 billion\
+Humanoid: False\
+----------------------------\
+What would you like to do? 4\
+Thank you for using The Federation Archives!\
+\
+}
