@@ -27,12 +27,12 @@ class Item
 	int cost;
 
 public:
-
+	// Default constructor
 	Item(){
 		name = "";
 		cost = 0;
 	}
-
+	//overloaded constructor
 	Item(std::string name, int cost){
 		this->name = name;
 		this->cost = cost;

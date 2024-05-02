@@ -61,15 +61,15 @@ public:
 	bool AddItem(Item item){
 		bool foundDefault = false;
 		// Iterate through the mItems vector
-		for(Item currentItem : mItems){
-			// Check for fist default item in Items
-			if(currentItem.GetName() == ""){
-				currentItem = item;			// Sets currentItem to item from param
-				foundDefault = true;			// Shows we found a default item
-				break;					// Ensures that we only find the first default
+		
+		for (int i = 0; i < mItems.size(); i++) {		// Check for first default item in Items
+			if (mItems[i].GetName() == "") {
+				mItems[i] = item;								// Sets currentItem to item from param
+				foundDefault = true;							// Shows we found a default item
+				break;												// Ensures that we only find the first default
 			}
-			else{
-				foundDefault = true;			// Shows there was no default items in vector
+			else {
+				foundDefault = false;						// Shows there was no default items in vector
 			}
 		}
 		return foundDefault;

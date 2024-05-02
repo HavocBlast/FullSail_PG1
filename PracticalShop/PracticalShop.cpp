@@ -45,7 +45,7 @@ int main()
 
 	// TODO: Define an Inventory object for the player, and an Inventory object for the store. 
 
-        Inventory playerInventory = Inventory();
+        Inventory playerInventory = Inventory();        // Creates a default Inventory object 
         Inventory storeInventory = Inventory();
 
 	/* TODO: Prompt the user for their name
@@ -54,9 +54,9 @@ int main()
 	 * name. Store their input in the string. If they entered 
 	 * an empty string (e.g. "") assign them a default name.
 	*/
-
-        std::cout << "What is your name? ";
         std::string playerName;
+        std::cout << "What is your name? ";
+        
         std::cin >> playerName;
         if(playerName == ""){                   // If playerName is empty then use "Jacob"
             playerName = "Jacob";
@@ -64,7 +64,7 @@ int main()
 
 	// TODO: Use the SetGold method to give the player inventory 200 Gold.
 
-        playerInventory.SetGold(200);
+        playerInventory.SetGold(200);                       // Sets player's gold to 200
 
 	/* TODO: Call the AddItem method
 	 * ================================
@@ -78,7 +78,7 @@ int main()
 
 	// TODO: Use the SetGold method to give the store inventory 350 Gold.
 
-        storeInventory.SetGold(350);
+        storeInventory.SetGold(350);                        // sets store's got to 350
 
     /* TODO: Call the AddItem method
 	 * ================================
@@ -86,7 +86,7 @@ int main()
 	 * StoreStartingItems array to the store's inventory.
 	 */
 
-    for(Item startingItem : StoreStartingItems){
+    for(Item startingItem : StoreStartingItems){        // interates through the vector of starting items and adds each to the store inventory
         storeInventory.AddItem(startingItem);
     }
 
@@ -104,7 +104,7 @@ int main()
              * the player's inventory and the store's inventory.
              */
 
-            ShopUtils::ShowInventories(playerName, playerInventory, storeInventory);
+            ShopUtils::ShowInventories(playerName, playerInventory, storeInventory);        // Calls ShowInventories using the needed inputs
 
             Console::SetCursorPosition(5, 18);
 
